@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-<meta name="description" content="Moon Edge Studio develops Android and iOS apps including image tools, utility apps and mobile productivity solutions.">
-<meta name="keywords" content="Moon Edge Studio, Android Apps, iOS Apps, Image Resizer, Mobile App Developer">
-<meta name="author" content="Moon Edge Studio">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Moon Edge Studio | Android & iOS App Developer</title>
-<link rel="icon" type="image/png" href="/favicon.png">
+
+<meta name="description" content="Moon Edge Studio develops Android and iOS apps including utility tools, image processing apps and productivity solutions.">
+<meta name="keywords" content="Moon Edge Studio, Android Apps, iOS Apps, FlutterFlow, Mobile App Developer">
+<meta name="author" content="Moon Edge Studio">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -19,26 +25,39 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#050816;
+background:radial-gradient(circle at top,#102040,#050816);
 color:white;
+overflow-x:hidden;
 }
+
+/* HEADER */
 
 header{
 position:sticky;
 top:0;
-z-index:100;
-padding:20px 10%;
+z-index:1000;
+padding:18px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,.6);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-font-size:28px;
+display:flex;
+align-items:center;
+gap:12px;
+font-size:26px;
 font-weight:bold;
 color:#3ea6ff;
+}
+
+.logo img{
+width:42px;
+height:42px;
+border-radius:50%;
 }
 
 nav a{
@@ -52,22 +71,24 @@ nav a:hover{
 color:#3ea6ff;
 }
 
+/* HERO */
+
 .hero{
-height:90vh;
+min-height:95vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 background:
-linear-gradient(rgba(5,8,22,.7),rgba(5,8,22,.9)),
+linear-gradient(rgba(5,8,22,.75),rgba(5,8,22,.92)),
 url('https://images.unsplash.com/photo-1518770660439-4636190af475');
 background-size:cover;
 background-position:center;
 }
 
 .hero-content h1{
-font-size:65px;
+font-size:68px;
 margin-bottom:20px;
 }
 
@@ -77,27 +98,47 @@ color:#3ea6ff;
 
 .hero-content p{
 font-size:20px;
-max-width:800px;
+max-width:850px;
 margin:auto;
 line-height:1.8;
-color:#ddd;
+color:#d8d8d8;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
+margin-top:35px;
+padding:16px 36px;
 background:#3ea6ff;
 color:white;
 text-decoration:none;
-border-radius:10px;
+border-radius:12px;
 font-weight:bold;
 transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
+
+.hero-stats{
+display:flex;
+justify-content:center;
+gap:50px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.hero-stats h3{
+font-size:34px;
+color:#3ea6ff;
+}
+
+.hero-stats p{
+font-size:14px;
+color:#ccc;
+}
+
+/* SECTION */
 
 .section{
 padding:90px 10%;
@@ -105,9 +146,11 @@ padding:90px 10%;
 
 .section h2{
 text-align:center;
-margin-bottom:50px;
 font-size:42px;
+margin-bottom:50px;
 }
+
+/* GLASS CARDS */
 
 .cards{
 display:grid;
@@ -116,11 +159,13 @@ gap:25px;
 }
 
 .card{
-background:#111827;
-padding:25px;
-border-radius:18px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+padding:28px;
+border-radius:22px;
 transition:.3s;
-border:1px solid rgba(255,255,255,.05);
+box-shadow:0 8px 30px rgba(0,0,0,.3);
 }
 
 .card:hover{
@@ -134,54 +179,119 @@ color:#3ea6ff;
 }
 
 .card p{
-line-height:1.7;
-color:#ccc;
+line-height:1.8;
+color:#d2d2d2;
 }
 
 .play-btn{
 display:inline-block;
-margin-top:15px;
-padding:10px 18px;
+margin-top:18px;
+padding:12px 20px;
 background:#3ea6ff;
-border-radius:8px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+border-radius:10px;
 }
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* CONTACT */
 
 .contact-box{
 text-align:center;
-font-size:18px;
-line-height:2;
 }
 
-.contact-box a{
-color:#3ea6ff;
-text-decoration:none;
+.social-icons{
+margin-top:30px;
 }
+
+.social-icons a{
+color:#3ea6ff;
+font-size:34px;
+margin:0 15px;
+transition:.3s;
+}
+
+.social-icons a:hover{
+color:white;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:35px;
-background:#111827;
-margin-top:40px;
+padding:45px;
+background:#0d1325;
+margin-top:50px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h3{
+color:#3ea6ff;
+margin-bottom:10px;
 }
 
 footer p{
 color:#aaa;
+margin-bottom:15px;
 }
+
+footer a{
+color:#4da3ff;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:42px;
+}
+
+.section h2{
+font-size:32px;
+}
+
+nav{
+display:none;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">Moon Edge Studio</div>
+
+<div class="logo">
+<img src="favicon.png" alt="Moon Edge Studio">
+<span>Moon Edge Studio</span>
+</div>
 
 <nav>
 <a href="#about">About</a>
 <a href="#apps">Apps</a>
+<a href="#gallery">Gallery</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
@@ -191,11 +301,29 @@ color:#aaa;
 <h1>Building <span>Android & iOS Apps</span> 🚀</h1>
 
 <p>
-Welcome to Moon Edge Studio.
-An independent mobile app development brand focused on useful Android & iOS applications, productivity tools, utility apps and innovative digital products.
+Moon Edge Studio creates useful mobile applications, utility tools, image processing apps and productivity solutions for Android and iOS users worldwide.
 </p>
 
 <a href="#apps" class="btn">Explore Apps</a>
+
+<div class="hero-stats">
+
+<div>
+<h3>2+</h3>
+<p>Apps</p>
+</div>
+
+<div>
+<h3>2026</h3>
+<p>Founded</p>
+</div>
+
+<div>
+<h3>24/7</h3>
+<p>Development</p>
+</div>
+
+</div>
 
 </div>
 
@@ -208,24 +336,18 @@ An independent mobile app development brand focused on useful Android & iOS appl
 <div class="cards">
 
 <div class="card">
-<h3>📱 Mobile Development</h3>
-<p>
-Building modern Android & iOS applications with clean UI, performance and user-focused experiences.
-</p>
+<h3>📱 Android & iOS Apps</h3>
+<p>Developing modern mobile applications with clean design and smooth user experiences.</p>
 </div>
 
 <div class="card">
 <h3>🚀 App Publishing</h3>
-<p>
-Publishing applications on Google Play Store and continuously improving products through updates.
-</p>
+<p>Publishing and maintaining apps on Google Play while continuously improving products.</p>
 </div>
 
 <div class="card">
-<h3>⚡ Learning & Growth</h3>
-<p>
-Exploring new technologies, FlutterFlow workflows, app marketing and startup building.
-</p>
+<h3>⚡ Innovation</h3>
+<p>Exploring FlutterFlow, automation, productivity tools and digital products.</p>
 </div>
 
 </div>
@@ -243,8 +365,7 @@ Exploring new technologies, FlutterFlow workflows, app marketing and startup bui
 <h3>🏆 WarBase Pro CoC Layouts</h3>
 
 <p>
-Ultimate Clash of Clans base layouts for TH10–TH18.
-Copy, build and dominate with war, farming and trophy bases.
+Ultimate Clash of Clans base layouts for TH10–TH18. War bases, farming bases and trophy bases in one app.
 </p>
 
 <a class="play-btn"
@@ -260,7 +381,7 @@ View on Play Store
 <h3>🖼️ Image Resizer - Compress & Convert</h3>
 
 <p>
-Currently under development. Resize, compress and convert images quickly and efficiently.
+Resize, compress and convert images quickly. Currently under development.
 </p>
 
 </div>
@@ -270,10 +391,26 @@ Currently under development. Resize, compress and convert images quickly and eff
 <h3>🔥 More Apps Coming Soon</h3>
 
 <p>
-New utility, productivity and photo editing applications are in development.
+More utility and productivity applications are currently in development.
 </p>
 
 </div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="section">
+
+<h2>App Screenshots</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/300x600?text=Screenshot+1">
+
+<img src="https://via.placeholder.com/300x600?text=Screenshot+2">
+
+<img src="https://via.placeholder.com/300x600?text=Screenshot+3">
 
 </div>
 
@@ -285,51 +422,43 @@ New utility, productivity and photo editing applications are in development.
 
 <div class="contact-box">
 
-📧 Email:
-<br>
-<a href="mailto:moonedgestudio@gmail.com">
-moonedgestudio@gmail.com
-</a>
+<p>
+📧 moonedgestudio@gmail.com
+</p>
 
-<br><br>
+<div class="social-icons">
 
-📷 Instagram:
-<br>
 <a href="https://instagram.com/moonedgestudio" target="_blank">
-@moonedgestudio
+<i class="fab fa-instagram"></i>
 </a>
 
-<br><br>
-
-👽 Reddit:
-<br>
 <a href="https://reddit.com/user/moonedgestudio" target="_blank">
-u/moonedgestudio
+<i class="fab fa-reddit"></i>
 </a>
 
-<br><br>
-
-▶ YouTube:
-<br>
 <a href="https://youtube.com/@moonedgestudio" target="_blank">
-@moonedgestudio
+<i class="fab fa-youtube"></i>
 </a>
+
+</div>
 
 </div>
 
 </section>
 
 <footer>
-  <p>
-    © 2026 Moon Edge Studio • Building Useful Mobile Apps
-  </p>
 
-  <br>
+<h3>Moon Edge Studio</h3>
 
-  <a href="privacy-policy.html" style="color:#4da3ff;">
-    Privacy Policy
-  </a>
+<p>
+Android & iOS Apps • Utility Tools • Mobile Products
+</p>
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
 </footer>
-  
+
 </body>
 </html>
