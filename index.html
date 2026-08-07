@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Moon Edge Studio | Android & iOS App Developer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(12px);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#3ea6ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#3ea6ff;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(5,8,22,.7),rgba(5,8,22,.9)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:#3ea6ff;
+}
+
+.hero-content p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#3ea6ff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.section{
+padding:90px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:50px;
+font-size:42px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:18px;
+transition:.3s;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#3ea6ff;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#3ea6ff;
+}
+
+.card p{
+line-height:1.7;
+color:#ccc;
+}
+
+.play-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#3ea6ff;
+border-radius:8px;
+text-decoration:none;
+color:white;
+}
+
+.contact-box{
+text-align:center;
+font-size:18px;
+line-height:2;
+}
+
+.contact-box a{
+color:#3ea6ff;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:35px;
+background:#111827;
+margin-top:40px;
+}
+
+footer p{
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Moon Edge Studio</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#apps">Apps</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Building <span>Android & iOS Apps</span> 🚀</h1>
+
+<p>
+Welcome to Moon Edge Studio.
+An independent mobile app development brand focused on useful Android & iOS applications, productivity tools, utility apps and innovative digital products.
+</p>
+
+<a href="#apps" class="btn">Explore Apps</a>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<h2>About Moon Edge Studio</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📱 Mobile Development</h3>
+<p>
+Building modern Android & iOS applications with clean UI, performance and user-focused experiences.
+</p>
+</div>
+
+<div class="card">
+<h3>🚀 App Publishing</h3>
+<p>
+Publishing applications on Google Play Store and continuously improving products through updates.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Learning & Growth</h3>
+<p>
+Exploring new technologies, FlutterFlow workflows, app marketing and startup building.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="apps" class="section">
+
+<h2>My Apps</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🏆 WarBase Pro CoC Layouts</h3>
+
+<p>
+Ultimate Clash of Clans base layouts for TH10–TH18.
+Copy, build and dominate with war, farming and trophy bases.
+</p>
+
+<a class="play-btn"
+href="https://play.google.com/store/apps/details?id=com.moonedgestudio.warbasepro2027"
+target="_blank">
+View on Play Store
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🖼️ Image Resizer - Compress & Convert</h3>
+
+<p>
+Currently under development. Resize, compress and convert images quickly and efficiently.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 More Apps Coming Soon</h3>
+
+<p>
+New utility, productivity and photo editing applications are in development.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="section">
+
+<h2>Connect With Me</h2>
+
+<div class="contact-box">
+
+📧 Email:
+<br>
+<a href="mailto:moonedgestudio@gmail.com">
+moonedgestudio@gmail.com
+</a>
+
+<br><br>
+
+📷 Instagram:
+<br>
+<a href="https://instagram.com/moonedgestudio" target="_blank">
+@moonedgestudio
+</a>
+
+<br><br>
+
+👽 Reddit:
+<br>
+<a href="https://reddit.com/user/moonedgestudio" target="_blank">
+u/moonedgestudio
+</a>
+
+<br><br>
+
+▶ YouTube:
+<br>
+<a href="https://youtube.com/@moonedgestudio" target="_blank">
+@moonedgestudio
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>
+© 2026 Moon Edge Studio • Building Useful Mobile Apps
+</p>
+</footer>
+
+</body>
+</html>
